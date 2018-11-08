@@ -1,15 +1,14 @@
 <div class="row">
   <div class="col-xs-12">
-      <button class="btn btn-success" >Recipe</button>
-      <hr>
-  </div>
+    <button class="btn btn-success" (click)="onAddServer()">Recipe</button>
   <hr>
+  </div>
 </div>
 <div class="row">
   <div class="col-xs-12">
-      <app-recipe-item 
-      *ngFor="let recipeEL of recipes"
-      [recipe]="recipeEL"
-      (recipeSelected)="onRecipeSelected(recipeEL)"></app-recipe-item>
+     <app-recipe-item 
+     *ngFor="let recipeEl of recipes"
+     [recipe]="recipeEl"
+     ></app-recipe-item>
   </div>
 </div>

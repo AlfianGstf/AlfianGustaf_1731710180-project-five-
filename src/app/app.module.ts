@@ -6,19 +6,15 @@ import { HeaderComponent } from './header/header.component';
 import { RecipeComponent } from './recipe/recipe.component';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 
-//tambahan
 import { RecipeListComponent } from "./recipe/recipe-list/recipe-list.component";
 import { RecipeDetailComponent } from "./recipe/recipe-detail/recipe-detail.component";
 
-//Tambahkan (2)
 import { RecipeItemComponent } from "./recipe/recipe-list/recipe-item/recipe-item.component";
 
-//Tambahkan (3)
 import { ShoppingEditComponent } from "./shopping-list/shopping-edit/shopping-edit.component";
-import { SharedComponent } from './shared/shared.component';
-import { FooterGustafComponent } from './FooterGustaf/FooterGustaf.component';
-import { DropdownDirective } from './shared/dropdown.directive';
-
+import { FooterComponent } from './footer/footer.component';
+import { DropdownDirective } from './shared/dropdown.directive'
+import { ShoppingListService } from './shopping-list/shopping-list.service';
 
 @NgModule({
   declarations: [
@@ -27,25 +23,18 @@ import { DropdownDirective } from './shared/dropdown.directive';
     RecipeComponent,
     ShoppingListComponent,
 
-  //tambahan
-  RecipeListComponent,
-  RecipeDetailComponent,
+    RecipeListComponent,
+    RecipeDetailComponent,
 
-  //Tambahkan (2)
-  RecipeItemComponent,
-
-//Tambahkan (3)
-ShoppingEditComponent,
-SharedComponent,
-FooterGustafComponent,
-DropdownDirective
+    RecipeItemComponent,
+    ShoppingEditComponent,
+    FooterComponent,
+    DropdownDirective
 ],
   imports: [
     BrowserModule
   ],
-  providers: [],
-  bootstrap: [
-    AppComponent
-  ]
+  providers: [ShoppingListService],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
