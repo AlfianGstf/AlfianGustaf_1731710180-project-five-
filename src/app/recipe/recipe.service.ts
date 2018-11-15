@@ -32,6 +32,10 @@ private recipes:Recipe[]=[
     addIngredientsShoppingList(ingredient: Ingredient[]){
       this.slsService.addIngredients(ingredient);
     }
+
+    getRecipe(index:number){
+      return this.recipes[index];
+    }
 constructor(private slsService: ShoppingListService) { }
 
 }
